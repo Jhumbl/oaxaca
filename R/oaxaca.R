@@ -20,7 +20,7 @@ plot.oaxaca <- function(x, decomposition = "threefold", type = "variables",
                         variable.labels = NULL,
                         ci = TRUE, ci.level = 0.95, 
                         title = "", xlab = "", ylab = "", 
-                        bar.color = NULL, ...) {
+                        bar.color = NULL, customBaseSize=11, ...) {
   cl <- match.call()
   
   return(.plot.oaxaca(x=x, decomposition=decomposition, type=type,
@@ -30,6 +30,6 @@ plot.oaxaca <- function(x, decomposition = "threefold", type = "variables",
                       component.labels=component.labels, variable.labels=variable.labels, 
                       ci=ci, ci.level=ci.level, 
                       title=title, xlab=xlab, ylab=ylab, 
-                      bar.color=bar.color, cl=cl, ...))
+                      bar.color=bar.color, cl=cl, customBaseSize=customBaseSize ...))
 }
 
