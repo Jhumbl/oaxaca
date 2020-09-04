@@ -671,7 +671,7 @@ function(formula, data, group.weights = NULL, R = 1000, reg.fun = lm, cl, ...) {
                          component.left, 
                          component.labels, variable.labels,
                          ci, ci.level, 
-                         title, xlab, ylab, bar.color, cl, ...) {
+                         title, xlab, ylab, bar.color, cl, customBaseSize, ...) {
   
   
   # check that arguments are ok
@@ -948,7 +948,7 @@ function(formula, data, group.weights = NULL, R = 1000, reg.fun = lm, cl, ...) {
     coord_flip() +
     p.facet_wrap +
     scale_x_discrete(limits=left.side.labels) + 
-    theme_bw() +
+    theme_bw(base_size=customBaseSize) +
     guides(fill=FALSE)
 
 }
